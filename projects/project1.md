@@ -3,5 +3,5 @@ layout: project
 title: "项目"
 description: "Description of Project"
 header-img: "img/home-bg.jpg"
-category: 项目
+category: project1
 ---
