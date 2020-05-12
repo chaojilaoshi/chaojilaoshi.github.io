@@ -12,7 +12,7 @@ layout: default
                     {% if page.subtitle %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
-                    <span class="meta">Posted by {{ page.author }} on {{ page.date | date: "%B %-d, %Y" }}</span>	
+                    <span class="meta">作者： {{ page.author }}  发表于： {{ page.date | date: "%B %-d, %Y" }}</span>	
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@ layout: default
 	<div class="float-left">
 	<div class="recentpost" style="padding: 10px">
 	
-	<h4> Recently by the same author: </h4> 
+	<h4> 最近由同一作者撰写: </h4> 
 	
 	<hr class="style-one">
 	
@@ -95,7 +95,7 @@ layout: default
 		<div class="relevantpost" style="padding: 10px">
 		
 		
-		<h4> You may find interesting: </h4> 
+		<h4> 猜你喜欢: </h4> 
 		
 		<hr class="style-one">
 		
@@ -105,7 +105,7 @@ layout: default
 			<h4 class="post-subtitle">{{ post.subtitle }}</h4>
 		{% endif %}
 		
-		<p class="post-meta" style="margin-top: 5px;margin-bottom:5px; font-size: 0.8em">Posted by {{ post.author }} on {{ post.date | date: "%B %-d, %Y" }}</p>
+		<p class="post-meta" style="margin-top: 5px;margin-bottom:5px; font-size: 0.8em">作者： {{ post.author }} 发表于： {{ post.date | date: "%B %-d, %Y" }}</p>
 		
 		<div class="notepad-index-post-tags" style="">
 		{% for tag in post.tags %}<a href="{{ site.baseurl }}/search/index.html#{{ tag | cgi_encode }}" title="Other posts from the {{ tag | capitalize }} tag">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
@@ -162,12 +162,12 @@ layout: default
                 <ul class="pager">
                     {% if page.previous.url %}
                     <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; 上一篇</a>
                     </li>
                     {% endif %}
                     {% if page.next.url %}
                     <li class="next">
-                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">下一篇 &rarr;</a>
                     </li>
                     {% endif %}
                 </ul>
